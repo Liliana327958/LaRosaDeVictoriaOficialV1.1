@@ -1,0 +1,1731 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>La Rosa de Victoria - Catálogo</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap');
+    body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #000; color: white; }
+    header { text-align: center; padding: 20px; }
+    header img { width: 160px; margin-bottom: 10px; border-radius: 16px; }
+    header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: white; margin-bottom: 5px; }
+    header p { color: #ccc; font-size: 1rem; }
+    .catalogo { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 30px; }
+    .producto { background-color: #1a1a1a; border-radius: 12px; padding: 15px; text-align: center;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.05); }
+    .producto img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer; }
+    .producto h3 { font-family: 'Playfair Display', serif; color: #FFD700; margin: 10px 0 5px; }
+    .producto p { margin: 5px 0; font-size: 0.95rem; }
+    .producto input { margin-top: 10px; }
+
+    .btn-enviar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 15px 25px;
+      font-size: 1rem;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Modal para imagen ampliada */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+  
+/* ---- Agregado: botones de secciones y redes sociales ---- */
+.secciones { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 12px 0 0; }
+.btn-seccion { background: #222; color: #fff; border: 1px solid #444; padding: 10px 14px; border-radius: 999px; cursor: pointer; font-weight: 600; transition: all .2s ease; }
+.btn-seccion:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.35); }
+.btn-seccion.activo { background: #FFD700; color: #000; border-color: #FFD700; }
+.sociales { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin: 8px 0 0; }
+.social { text-decoration:none; color:#fff; font-weight:600; font-size:.9rem; padding:8px 10px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; }
+.social svg { display:block; }
+.social.whatsapp { background:#25D366; }
+.social.instagram { background:#C13584; }
+.social.facebook { background:#1877F2; }
+.social.tiktok { background:#000000; border:1px solid #333; }
+
+</style>
+</head>
+<body>
+<header>
+<img alt="Logo La Rosa de Victoria" src="logo.png"/>
+<h1>La Rosa de Victoria</h1>
+<div class="sociales">
+  <a class="social whatsapp" href="https://wa.me/573208533423" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.96C.16 5.3 5.36 0 12.02 0c3.2 0 6.2 1.246 8.477 3.516A11.86 11.86 0 0124 12.02c-.003 6.66-5.303 11.86-11.877 11.86a11.9 11.9 0 01-5.946-1.59L.057 24zM6.6 19.2c1.77 1.05 3.8 1.6 5.92 1.6h.005c5.52 0 10.01-4.48 10.013-9.99.002-2.676-1.04-5.19-2.94-7.08A9.94 9.94 0 0012.02 1.99c-5.51 0-9.99 4.48-9.99 9.99 0 2.11.62 4.14 1.79 5.89l-.95 3.48 3.73-.15zm11.4-5.64c-.06-.1-.22-.16-.46-.28-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.42-1.34-1.66-.14-.24-.01-.38.11-.5.12-.12.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.7 2.6 4.1 3.64.57.25 1.02.4 1.37.51.58.18 1.12.16 1.54.1.47-.07 1.4-.57 1.6-1.14.2-.57.2-1.06.14-1.14z"/></svg></a>
+  <a class="social instagram" href="https://www.instagram.com/theroseofvictory?igsh=ODVmN3Q5Yzg0bm9w" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.4.61.22 1.05.48 1.51.94.46.46.72.9.94 1.51.16.46.346 1.26.4 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.4 2.43-.22.61-.48 1.05-.94 1.51-.46.46-.9.72-1.51.94-.46.16-1.26.346-2.43.4-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.4-.61-.22-1.05-.48-1.51-.94-.46-.46-.72-.9-.94-1.51-.16-.46-.346-1.26-.4-2.43C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.054-1.17.24-1.97.4-2.43.22-.61.48-1.05.94-1.51.46-.46.9-.72 1.51-.94.46-.16 1.26-.346 2.43-.4C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.532.012-4.776.07-.98.046-1.51.208-1.86.346-.47.182-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.138.35-.3.88-.346 1.86-.058 1.244-.07 1.616-.07 4.776s.012 3.532.07 4.776c.046.98.208 1.51.346 1.86.182.47.4.8.75 1.15.35.35.68.57 1.15.75.35.138.88.3 1.86.346 1.244.058 1.616.07 4.776.07s3.532-.012 4.776-.07c.98-.046 1.51-.208 1.86-.346.47-.182.8-.4 1.15-.75.35-.35.57-.68.75-1.15.138-.35.3-.88.346-1.86.058-1.244.07-1.616.07-4.776s-.012-3.532-.07-4.776c-.046-.98-.208-1.51-.346-1.86-.182-.47-.4-.8-.75-1.15-.35-.35-.68-.57-1.15-.75-.35-.138-.88-.3-1.86-.346C15.532 4.012 15.16 4 12 4zm0 2.8a5.2 5.2 0 110 10.4 5.2 5.2 0 010-10.4zm0 1.8a3.4 3.4 0 100 6.8 3.4 3.4 0 000-6.8zM18.4 5.6a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></a>
+  <a class="social facebook" href="https://www.facebook.com/share/1F2jSuuuHX/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35C.595 0 0 .595 0 1.326v21.348C0 23.406.595 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.41c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.766v2.317h3.59l-.467 3.696h-3.123V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .595 23.406 0 22.675 0z"/></svg></a>
+  <a class="social tiktok" href="https://www.tiktok.com/@theroseofvictory?_r=1&_t=ZS-92HeMZLtJnc" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8.04c1.4 1.04 3.13 1.67 5 1.71v3.08a9.14 9.14 0 01-5-1.45v4.98A6.36 6.36 0 119.64 10.1v3.07a3.29 3.29 0 103.29 3.3V2h3.07c.17 2.26 1.85 4.13 3.99 4.7V9c-1.51-.17-2.96-.6-4-1.34V8.04z"/></svg></a>
+</div>
+
+<p>Selecciona los ramos que te interesan y compártelos por WhatsApp</p>
+<div class="secciones">
+  <button id="btn-naturales" class="btn-seccion activo" onclick="mostrarSeccion('naturales')">Arreglos Naturales</button>
+  <button id="btn-eternas" class="btn-seccion" onclick="mostrarSeccion('eternas')">Rosas Eternas</button>
+</div>
+
+</header>
+<main class="catalogo"><div class="producto">
+<img alt="Ramo 000" onclick="ampliarImagen(this.src)" src="ramo_000.jpeg"/>
+<h3>Ramo 001</h3>
+<p>Precio: $ 460.000</p>
+<input type="checkbox" value="Ramo 001|$ 460,000|ramo_000.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 001" onclick="ampliarImagen(this.src)" src="ramo_001.jpeg"/>
+<h3>Ramo 002</h3>
+<p>Precio: $ 440.000</p>
+<input type="checkbox" value="Ramo 002|$ 440,000|ramo_001.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 002" onclick="ampliarImagen(this.src)" src="ramo_002.jpeg"/>
+<h3>Ramo 003</h3>
+<p>Precio: $ 440.000</p>
+<input type="checkbox" value="Ramo 003|$ 440,000|ramo_002.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 003" onclick="ampliarImagen(this.src)" src="ramo_003.jpeg"/>
+<h3>Ramo 004</h3>
+<p>Precio: $ 350.000</p>
+<input type="checkbox" value="Ramo 004|$ 350,000|ramo_003.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 004" onclick="ampliarImagen(this.src)" src="ramo_004.jpeg"/>
+<h3>Ramo 005</h3>
+<p>Precio: $ 320.000</p>
+<input type="checkbox" value="Ramo 005|$ 320,000|ramo_004.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 005" onclick="ampliarImagen(this.src)" src="ramo_006.jpeg"/>
+<h3>Ramo 006</h3>
+<p>Precio: $ 280.000</p>
+<input type="checkbox" value="Ramo 006|$ 280,000|ramo_006.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 006" onclick="ampliarImagen(this.src)" src="ramo_007.jpeg"/>
+<h3>Ramo 007</h3>
+<p>Precio: $ 280.000</p>
+<input type="checkbox" value="Ramo 007|$ 280,000|ramo_007.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 008" onclick="ampliarImagen(this.src)" src="ramo_008.jpeg"/>
+<h3>Ramo 008</h3>
+<p>Precio: $ 280.000</p>
+<input type="checkbox" value="Ramo 008|$ 280,000|ramo_008.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 010" onclick="ampliarImagen(this.src)" src="ramo_010.jpeg"/>
+<h3>Ramo 009</h3>
+<p>Precio: $ 270.000</p>
+<input type="checkbox" value="Ramo 009|$ 270,000|ramo_010.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 009" onclick="ampliarImagen(this.src)" src="ramo_009.jpeg"/>
+<h3>Ramo 010</h3>
+<p>Precio: $ 250.000</p>
+<input type="checkbox" value="Ramo 010|$ 250,000|ramo_009.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 214" onclick="ampliarImagen(this.src)" src="ramo_297.jpeg"/>
+<h3>Ramo 011</h3>
+<p>Precio: $ 230.000</p>
+<input type="checkbox" value="Ramo 011|$ 230,000|ramo_297.jpeg"/> Seleccionar
+</div><div class="producto">
+<img alt="Ramo 021" onclick="ampliarImagen(this.src)" src="ramo_021.jpeg"/>
+<h3>Ramo 012</h3>
+<p>Precio: $ 215.000</p>
+<input type="checkbox" value="Ramo 012|$ 215,000|ramo_021.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 033" onclick="ampliarImagen(this.src)" src="ramo_033.jpeg"/>
+<h3>Ramo 013</h3>
+<p>Precio: $ 210.000</p>
+<input type="checkbox" value="Ramo 013|$ 210,000|ramo_033.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 099" onclick="ampliarImagen(this.src)" src="ramo_099.jpeg"/>
+<h3>Ramo 014</h3>
+<p>Precio: $ 230.000</p>
+<input type="checkbox" value="Ramo 014|$ 230,000|ramo_099.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 215" onclick="ampliarImagen(this.src)" src="ramo_298.jpeg"/>
+<h3>Ramo 015</h3>
+<p>Precio: $ 210.000</p>
+<input type="checkbox" value="Ramo 015|$ 210,000|ramo_298.jpeg"/> Seleccionar
+</div><div class="producto">
+<img alt="Ramo 216" onclick="ampliarImagen(this.src)" src="ramo_299.jpeg"/>
+<h3>Ramo 016</h3>
+<p>Precio: $ 210.000</p>
+<input type="checkbox" value="Ramo 016|$ 210,000|ramo_299.jpeg"/> Seleccionar
+</div><div class="producto">
+<img alt="Ramo 121" onclick="ampliarImagen(this.src)" src="ramo_121.jpeg"/>
+<h3>Ramo 017</h3>
+<p>Precio: $ 205.000</p>
+<input type="checkbox" value="Ramo 017|$ 205,000|ramo_121.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 174" onclick="ampliarImagen(this.src)" src="ramo_174.jpeg"/>
+<h3>Ramo 018</h3>
+<p>Precio: $ 205.000</p>
+<input type="checkbox" value="Ramo 018|$ 205,000|ramo_174.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 066" onclick="ampliarImagen(this.src)" src="ramo_066.jpeg"/>
+<h3>Ramo 019</h3>
+<p>Precio: $ 200.000</p>
+<input type="checkbox" value="Ramo 019|$ 200,000|ramo_066.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 088" onclick="ampliarImagen(this.src)" src="ramo_088.jpeg"/>
+<h3>Ramo 020</h3>
+<p>Precio: $ 200.000</p>
+<input type="checkbox" value="Ramo 020|$ 200,000|ramo_088.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 131" onclick="ampliarImagen(this.src)" src="ramo_131.jpeg"/>
+<h3>Ramo 021</h3>
+<p>Precio: $ 200.000</p>
+<input type="checkbox" value="Ramo 021|$ 200,000|ramo_131.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 240" onclick="ampliarImagen(this.src)" src="ramo_240.jpeg"/>
+<h3>Ramo 022</h3>
+<p>Precio: $ 200.000</p>
+<input type="checkbox" value="Ramo 022|$ 200,000|ramo_240.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 217" onclick="ampliarImagen(this.src)" src="ramo_300.jpeg"/>
+<h3>Ramo 023</h3>
+<p>Precio: $ 210.000</p>
+<input type="checkbox" value="Ramo 023|$ 210,000|ramo_300.jpeg"/> Seleccionar
+</div><div class="producto">
+<img alt="Ramo 153" onclick="ampliarImagen(this.src)" src="ramo_153.jpeg"/>
+<h3>Ramo 024</h3>
+<p>Precio: $ 195.000</p>
+<input type="checkbox" value="Ramo 024|$ 195,000|ramo_153.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 163" onclick="ampliarImagen(this.src)" src="ramo_163.jpeg"/>
+<h3>Ramo 025</h3>
+<p>Precio: $ 195.000</p>
+<input type="checkbox" value="Ramo 025|$ 195,000|ramo_163.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 185" onclick="ampliarImagen(this.src)" src="ramo_185.jpeg"/>
+<h3>Ramo 026</h3>
+<p>Precio: $ 195.000</p>
+<input type="checkbox" value="Ramo 026|$ 195,000|ramo_185.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 207" onclick="ampliarImagen(this.src)" src="ramo_207.jpeg"/>
+<h3>Ramo 027</h3>
+<p>Precio: $ 195.000</p>
+<input type="checkbox" value="Ramo 027|$ 195,000|ramo_207.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 228" onclick="ampliarImagen(this.src)" src="ramo_228.jpeg"/>
+<h3>Ramo 028</h3>
+<p>Precio: $ 195.000</p>
+<input type="checkbox" value="Ramo 028|$ 195,000|ramo_228.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 229" onclick="ampliarImagen(this.src)" src="ramo_229.jpeg"/>
+<h3>Ramo 029</h3>
+<p>Precio: $ 195.000</p>
+<input type="checkbox" value="Ramo 029|$ 195,000|ramo_229.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 218" onclick="ampliarImagen(this.src)" src="ramo_301.jpeg"/>
+<h3>Ramo 030</h3>
+<p>Precio: $ 195.000</p>
+<input type="checkbox" value="Ramo 030|$ 195,000|ramo_301.jpeg"/> Seleccionar
+</div><div class="producto">
+<img alt="Ramo 239" onclick="ampliarImagen(this.src)" src="ramo_239.jpeg"/>
+<h3>Ramo 031</h3>
+<p>Precio: $ 200.000</p>
+<input type="checkbox" value="Ramo 031|$ 200,000|ramo_239.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 245" onclick="ampliarImagen(this.src)" src="ramo_245.jpeg"/>
+<h3>Ramo 032</h3>
+<p>Precio: $ 190.000</p>
+<input type="checkbox" value="Ramo 032|$ 190,000|ramo_245.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 241" onclick="ampliarImagen(this.src)" src="ramo_241.jpeg"/>
+<h3>Ramo 033</h3>
+<p>Precio: $ 185.000</p>
+<input type="checkbox" value="Ramo 033|$ 185,000|ramo_241.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 242" onclick="ampliarImagen(this.src)" src="ramo_242.jpeg"/>
+<h3>Ramo 034</h3>
+<p>Precio: $ 185.000</p>
+<input type="checkbox" value="Ramo 034|$ 185,000|ramo_242.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 260" onclick="ampliarImagen(this.src)" src="ramo_260.jpeg"/>
+<h3>Ramo 035</h3>
+<p>Precio: $ 180.000</p>
+<input type="checkbox" value="Ramo 035|$ 180,000|ramo_260.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 196" onclick="ampliarImagen(this.src)" src="ramo_196.jpeg"/>
+<h3>Ramo 036</h3>
+<p>Precio: $ 175.000</p>
+<input type="checkbox" value="Ramo 036|$ 175,000|ramo_196.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 247" onclick="ampliarImagen(this.src)" src="ramo_247.jpeg"/>
+<h3>Ramo 037</h3>
+<p>Precio: $ 175.000</p>
+<input type="checkbox" value="Ramo 037|$ 175,000|ramo_247.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 251" onclick="ampliarImagen(this.src)" src="ramo_251.jpeg"/>
+<h3>Ramo 038</h3>
+<p>Precio: $ 180.000</p>
+<input type="checkbox" value="Ramo 038|$ 180,000|ramo_251.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 256" onclick="ampliarImagen(this.src)" src="ramo_256.jpeg"/>
+<h3>Ramo 039</h3>
+<p>Precio: $ 170.000</p>
+<input type="checkbox" value="Ramo 039|$ 170,000|ramo_256.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 259" onclick="ampliarImagen(this.src)" src="ramo_259.jpeg"/>
+<h3>Ramo 040</h3>
+<p>Precio: $ 175.000</p>
+<input type="checkbox" value="Ramo 040|$ 175,000|ramo_259.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 244" onclick="ampliarImagen(this.src)" src="ramo_244.jpeg"/>
+<h3>Ramo 041</h3>
+<p>Precio: $ 175.000</p>
+<input type="checkbox" value="Ramo 041|$ 175,000|ramo_244.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 246" onclick="ampliarImagen(this.src)" src="ramo_246.jpeg"/>
+<h3>Ramo 042</h3>
+<p>Precio: $ 170.000</p>
+<input type="checkbox" value="Ramo 042|$ 170,000|ramo_246.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 248" onclick="ampliarImagen(this.src)" src="ramo_248.jpeg"/>
+<h3>Ramo 043</h3>
+<p>Precio: $ 170.000</p>
+<input type="checkbox" value="Ramo 043|$ 170,000|ramo_248.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 249" onclick="ampliarImagen(this.src)" src="ramo_249.jpeg"/>
+<h3>Ramo 044</h3>
+<p>Precio: $ 170.000</p>
+<input type="checkbox" value="Ramo 044|$ 170,000|ramo_249.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 258" onclick="ampliarImagen(this.src)" src="ramo_258.jpeg"/>
+<h3>Ramo 045</h3>
+<p>Precio: $ 170.000</p>
+<input type="checkbox" value="Ramo 045|$ 170,000|ramo_258.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 261" onclick="ampliarImagen(this.src)" src="ramo_261.jpeg"/>
+<h3>Ramo 046</h3>
+<p>Precio: $ 170.000</p>
+<input type="checkbox" value="Ramo 046|$ 170,000|ramo_261.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 262" onclick="ampliarImagen(this.src)" src="ramo_262.jpeg"/>
+<h3>Ramo 047</h3>
+<p>Precio: $ 170.000</p>
+<input type="checkbox" value="Ramo 047|$ 170,000|ramo_262.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 243" onclick="ampliarImagen(this.src)" src="ramo_243.jpeg"/>
+<h3>Ramo 048</h3>
+<p>Precio: $ 165.000</p>
+<input type="checkbox" value="Ramo 048|$ 165,000|ramo_243.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 252" onclick="ampliarImagen(this.src)" src="ramo_252.jpeg"/>
+<h3>Ramo 049</h3>
+<p>Precio: $ 160.000</p>
+<input type="checkbox" value="Ramo 049|$ 160,000|ramo_252.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 257" onclick="ampliarImagen(this.src)" src="ramo_257.jpeg"/>
+<h3>Ramo 050</h3>
+<p>Precio: $ 160.000</p>
+<input type="checkbox" value="Ramo 050|$ 160,000|ramo_257.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 263" onclick="ampliarImagen(this.src)" src="ramo_263.jpeg"/>
+<h3>Ramo 051</h3>
+<p>Precio: $ 180.000</p>
+<input type="checkbox" value="Ramo 051|$ 180,000|ramo_263.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 272" onclick="ampliarImagen(this.src)" src="ramo_272.jpeg"/>
+<h3>Ramo 052</h3>
+<p>Precio: $ 160.000</p>
+<input type="checkbox" value="Ramo 052|$ 160,000|ramo_272.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 269" onclick="ampliarImagen(this.src)" src="ramo_269.jpeg"/>
+<h3>Ramo 053</h3>
+<p>Precio: $ 170.000</p>
+<input type="checkbox" value="Ramo 053|$ 170,000|ramo_269.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 250" onclick="ampliarImagen(this.src)" src="ramo_250.jpeg"/>
+<h3>Ramo 054</h3>
+<p>Precio: $ 150.000</p>
+<input type="checkbox" value="Ramo 054|$ 150,000|ramo_250.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 264" onclick="ampliarImagen(this.src)" src="ramo_264.jpeg"/>
+<h3>Ramo 055</h3>
+<p>Precio: $ 150.000</p>
+<input type="checkbox" value="Ramo 055|$ 150,000|ramo_264.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 268" onclick="ampliarImagen(this.src)" src="ramo_268.jpeg"/>
+<h3>Ramo 056</h3>
+<p>Precio: $ 150.000</p>
+<input type="checkbox" value="Ramo 056|$ 150,000|ramo_268.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 277" onclick="ampliarImagen(this.src)" src="ramo_277.jpeg"/>
+<h3>Ramo 057</h3>
+<p>Precio: $ 150.000</p>
+<input type="checkbox" value="Ramo 057|$ 150,000|ramo_277.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 281" onclick="ampliarImagen(this.src)" src="ramo_281.jpeg"/>
+<h3>Ramo 058</h3>
+<p>Precio: $ 165.000</p>
+<input type="checkbox" value="Ramo 058|$ 165,000|ramo_281.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 274" onclick="ampliarImagen(this.src)" src="ramo_274.jpeg"/>
+<h3>Ramo 059</h3>
+<p>Precio: $ 150.000</p>
+<input type="checkbox" value="Ramo 059|$ 150,000|ramo_274.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 275" onclick="ampliarImagen(this.src)" src="ramo_275.jpeg"/>
+<h3>Ramo 060</h3>
+<p>Precio: $ 145.000</p>
+<input type="checkbox" value="Ramo 060|$ 145,000|ramo_275.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 279" onclick="ampliarImagen(this.src)" src="ramo_279.jpeg"/>
+<h3>Ramo 061</h3>
+<p>Precio: $ 145.000</p>
+<input type="checkbox" value="Ramo 061|$ 145,000|ramo_279.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 280" onclick="ampliarImagen(this.src)" src="ramo_280.jpeg"/>
+<h3>Ramo 062</h3>
+<p>Precio: $ 150.000</p>
+<input type="checkbox" value="Ramo 062|$ 150,000|ramo_280.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 295" onclick="ampliarImagen(this.src)" src="ramo_295.jpeg"/>
+<h3>Ramo 063</h3>
+<p>Precio: $ 160.000</p>
+<input type="checkbox" value="Ramo 063|$ 160,000|ramo_295.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 018" onclick="ampliarImagen(this.src)" src="ramo_018.jpeg"/>
+<h3>Ramo 064</h3>
+<p>Precio: $ 150.000</p>
+<input type="checkbox" value="Ramo 064|$ 150,000|ramo_018.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 273" onclick="ampliarImagen(this.src)" src="ramo_273.jpeg"/>
+<h3>Ramo 065</h3>
+<p>Precio: $ 140.000</p>
+<input type="checkbox" value="Ramo 065|$ 140,000|ramo_273.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 282" onclick="ampliarImagen(this.src)" src="ramo_282.jpeg"/>
+<h3>Ramo 066</h3>
+<p>Precio: $ 145.000</p>
+<input type="checkbox" value="Ramo 066|$ 145,000|ramo_282.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 284" onclick="ampliarImagen(this.src)" src="ramo_284.jpeg"/>
+<h3>Ramo 067</h3>
+<p>Precio: $ 140.000</p>
+<input type="checkbox" value="Ramo 067|$ 140,000|ramo_284.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 296" onclick="ampliarImagen(this.src)" src="ramo_296.jpeg"/>
+<h3>Ramo 068</h3>
+<p>Precio: $ 145.000</p>
+<input type="checkbox" value="Ramo 068|$ 145,000|ramo_296.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 027" onclick="ampliarImagen(this.src)" src="ramo_027.jpeg"/>
+<h3>Ramo 069</h3>
+<p>Precio: $ 135.000</p>
+<input type="checkbox" value="Ramo 069|$ 135,000|ramo_027.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 288" onclick="ampliarImagen(this.src)" src="ramo_288.jpeg"/>
+<h3>Ramo 070</h3>
+<p>Precio: $ 135.000</p>
+<input type="checkbox" value="Ramo 070|$ 135,000|ramo_288.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 294" onclick="ampliarImagen(this.src)" src="ramo_294.jpeg"/>
+<h3>Ramo 071</h3>
+<p>Precio: $ 135.000</p>
+<input type="checkbox" value="Ramo 071|$ 135,000|ramo_294.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 011" onclick="ampliarImagen(this.src)" src="ramo_011.jpeg"/>
+<h3>Ramo 072</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 072|$ 130,000|ramo_011.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 012" onclick="ampliarImagen(this.src)" src="ramo_012.jpeg"/>
+<h3>Ramo 073</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 073|$ 130,000|ramo_012.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 015" onclick="ampliarImagen(this.src)" src="ramo_015.jpeg"/>
+<h3>Ramo 074</h3>
+<p>Precio: $ 135.000</p>
+<input type="checkbox" value="Ramo 074|$ 135,000|ramo_015.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 016" onclick="ampliarImagen(this.src)" src="ramo_016.jpeg"/>
+<h3>Ramo 075</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 075|$ 130,000|ramo_016.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 017" onclick="ampliarImagen(this.src)" src="ramo_017.jpeg"/>
+<h3>Ramo 076</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 076|$ 130,000|ramo_017.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 020" onclick="ampliarImagen(this.src)" src="ramo_020.jpeg"/>
+<h3>Ramo 077</h3>
+<p>Precio: $ 160.000</p>
+<input type="checkbox" value="Ramo 077|$ 160,000|ramo_020.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 022" onclick="ampliarImagen(this.src)" src="ramo_022.jpeg"/>
+<h3>Ramo 078</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 078|$ 130,000|ramo_022.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 023" onclick="ampliarImagen(this.src)" src="ramo_023.jpeg"/>
+<h3>Ramo 079</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 079|$ 130,000|ramo_023.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 030" onclick="ampliarImagen(this.src)" src="ramo_030.jpeg"/>
+<h3>Ramo 080</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 080|$ 130,000|ramo_030.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 034" onclick="ampliarImagen(this.src)" src="ramo_034.jpeg"/>
+<h3>Ramo 081</h3>
+<p>Precio: $ 140.000</p>
+<input type="checkbox" value="Ramo 081|$ 140,000|ramo_034.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 283" onclick="ampliarImagen(this.src)" src="ramo_283.jpeg"/>
+<h3>Ramo 082</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 082|$ 130,000|ramo_283.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 287" onclick="ampliarImagen(this.src)" src="ramo_287.jpeg"/>
+<h3>Ramo 083</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 083|$ 130,000|ramo_287.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 289" onclick="ampliarImagen(this.src)" src="ramo_289.jpeg"/>
+<h3>Ramo 084</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 084|$ 130,000|ramo_289.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 292" onclick="ampliarImagen(this.src)" src="ramo_292.jpeg"/>
+<h3>Ramo 085</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 085|$ 130,000|ramo_292.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 014" onclick="ampliarImagen(this.src)" src="ramo_014.jpeg"/>
+<h3>Ramo 086</h3>
+<p>Precio: $ 125.000</p>
+<input type="checkbox" value="Ramo 086|$ 125,000|ramo_014.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 025" onclick="ampliarImagen(this.src)" src="ramo_025.jpeg"/>
+<h3>Ramo 087</h3>
+<p>Precio: $ 125.000</p>
+<input type="checkbox" value="Ramo 087|$ 125,000|ramo_025.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 291" onclick="ampliarImagen(this.src)" src="ramo_291.jpeg"/>
+<h3>Ramo 088</h3>
+<p>Precio: $ 125.000</p>
+<input type="checkbox" value="Ramo 088|$ 125,000|ramo_291.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 024" onclick="ampliarImagen(this.src)" src="ramo_024.jpeg"/>
+<h3>Ramo 089</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 089|$ 120,000|ramo_024.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 032" onclick="ampliarImagen(this.src)" src="ramo_032.jpeg"/>
+<h3>Ramo 090</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 090|$ 120,000|ramo_032.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 037" onclick="ampliarImagen(this.src)" src="ramo_037.jpeg"/>
+<h3>Ramo 091</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 091|$ 120,000|ramo_037.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 038" onclick="ampliarImagen(this.src)" src="ramo_038.jpeg"/>
+<h3>Ramo 092</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 092|$ 120,000|ramo_038.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 041" onclick="ampliarImagen(this.src)" src="ramo_041.jpeg"/>
+<h3>Ramo 093</h3>
+<p>Precio: $ 140.000</p>
+<input type="checkbox" value="Ramo 093|$ 140,000|ramo_041.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 080" onclick="ampliarImagen(this.src)" src="ramo_080.jpeg"/>
+<h3>Ramo 094</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 094|$ 120,000|ramo_080.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 290" onclick="ampliarImagen(this.src)" src="ramo_290.jpeg"/>
+<h3>Ramo 095</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 095|$ 120,000|ramo_290.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 028" onclick="ampliarImagen(this.src)" src="ramo_028.jpeg"/>
+<h3>Ramo 096</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 096|$ 130,000|ramo_028.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 029" onclick="ampliarImagen(this.src)" src="ramo_029.png"/>
+<h3>Ramo 097</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 097|$ 115,000|ramo_029.png"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 048" onclick="ampliarImagen(this.src)" src="ramo_048.jpeg"/>
+<h3>Ramo 098</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 098|$ 115,000|ramo_048.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 059" onclick="ampliarImagen(this.src)" src="ramo_059.jpeg"/>
+<h3>Ramo 099</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 099|$ 115,000|ramo_059.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 060" onclick="ampliarImagen(this.src)" src="ramo_060.jpeg"/>
+<h3>Ramo 100</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 100|$ 115,000|ramo_060.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 082" onclick="ampliarImagen(this.src)" src="ramo_082.jpeg"/>
+<h3>Ramo 101</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 101|$ 115,000|ramo_082.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 031" onclick="ampliarImagen(this.src)" src="ramo_031.jpeg"/>
+<h3>Ramo 102</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 102|$ 120,000|ramo_031.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 035" onclick="ampliarImagen(this.src)" src="ramo_035.jpeg"/>
+<h3>Ramo 103</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 103|$ 110,000|ramo_035.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 036" onclick="ampliarImagen(this.src)" src="ramo_036.jpeg"/>
+<h3>Ramo 104</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 104|$ 120,000|ramo_036.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 039" onclick="ampliarImagen(this.src)" src="ramo_039.jpeg"/>
+<h3>Ramo 105</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 105|$ 110,000|ramo_039.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 040" onclick="ampliarImagen(this.src)" src="ramo_040.jpeg"/>
+<h3>Ramo 106</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 106|$ 110,000|ramo_040.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 042" onclick="ampliarImagen(this.src)" src="ramo_042.jpeg"/>
+<h3>Ramo 107</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 107|$ 110,000|ramo_042.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 043" onclick="ampliarImagen(this.src)" src="ramo_043.jpeg"/>
+<h3>Ramo 108</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 108|$ 110,000|ramo_043.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 050" onclick="ampliarImagen(this.src)" src="ramo_050.jpeg"/>
+<h3>Ramo 109</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 109|$ 110,000|ramo_050.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 053" onclick="ampliarImagen(this.src)" src="ramo_053.jpeg"/>
+<h3>Ramo 110</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 110|$ 110,000|ramo_053.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 056" onclick="ampliarImagen(this.src)" src="ramo_056.jpeg"/>
+<h3>Ramo 111</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 111|$ 110,000|ramo_056.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 058" onclick="ampliarImagen(this.src)" src="ramo_058.jpeg"/>
+<h3>Ramo 112</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 112|$ 110,000|ramo_058.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 062" onclick="ampliarImagen(this.src)" src="ramo_062.jpeg"/>
+<h3>Ramo 113</h3>
+<p>Precio: $ 120.000</p>
+<input type="checkbox" value="Ramo 113|$ 120,000|ramo_062.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 069" onclick="ampliarImagen(this.src)" src="ramo_069.jpeg"/>
+<h3>Ramo 114</h3>
+<p>Precio: $ 130.000</p>
+<input type="checkbox" value="Ramo 114|$ 130,000|ramo_069.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 074" onclick="ampliarImagen(this.src)" src="ramo_074.jpeg"/>
+<h3>Ramo 115</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 115|$ 115,000|ramo_074.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 079" onclick="ampliarImagen(this.src)" src="ramo_079.jpeg"/>
+<h3>Ramo 116</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 116|$ 115,000|ramo_079.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 098" onclick="ampliarImagen(this.src)" src="ramo_098.jpeg"/>
+<h3>Ramo 117</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 117|$ 115,000|ramo_098.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 052" onclick="ampliarImagen(this.src)" src="ramo_052.jpeg"/>
+<h3>Ramo 118</h3>
+<p>Precio: $ 115.000</p>
+<input type="checkbox" value="Ramo 118|$ 115,000|ramo_052.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 054" onclick="ampliarImagen(this.src)" src="ramo_054.jpeg"/>
+<h3>Ramo 119</h3>
+<p>Precio: $ 105.000</p>
+<input type="checkbox" value="Ramo 119|$ 105,000|ramo_054.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 075" onclick="ampliarImagen(this.src)" src="ramo_075.jpeg"/>
+<h3>Ramo 120</h3>
+<p>Precio: $ 110.000</p>
+<input type="checkbox" value="Ramo 120|$ 110,000|ramo_075.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 087" onclick="ampliarImagen(this.src)" src="ramo_087.jpeg"/>
+<h3>Ramo 121</h3>
+<p>Precio: $ 105.000</p>
+<input type="checkbox" value="Ramo 121|$ 105,000|ramo_087.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 064" onclick="ampliarImagen(this.src)" src="ramo_064.jpeg"/>
+<h3>Ramo 122</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 122|$ 100,000|ramo_064.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 072" onclick="ampliarImagen(this.src)" src="ramo_072.jpeg"/>
+<h3>Ramo 123</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 123|$ 100,000|ramo_072.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 076" onclick="ampliarImagen(this.src)" src="ramo_076.jpeg"/>
+<h3>Ramo 124</h3>
+<p>Precio: $ 105.000</p>
+<input type="checkbox" value="Ramo 124|$ 105,000|ramo_076.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 078" onclick="ampliarImagen(this.src)" src="ramo_078.jpeg"/>
+<h3>Ramo 125</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 125|$ 100,000|ramo_078.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 083" onclick="ampliarImagen(this.src)" src="ramo_083.jpeg"/>
+<h3>Ramo 126</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 126|$ 100,000|ramo_083.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 089" onclick="ampliarImagen(this.src)" src="ramo_089.jpeg"/>
+<h3>Ramo 127</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 127|$ 100,000|ramo_089.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 090" onclick="ampliarImagen(this.src)" src="ramo_090.jpeg"/>
+<h3>Ramo 128</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 128|$ 100,000|ramo_090.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 091" onclick="ampliarImagen(this.src)" src="ramo_091.jpeg"/>
+<h3>Ramo 129</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 129|$ 100,000|ramo_091.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 093" onclick="ampliarImagen(this.src)" src="ramo_093.jpeg"/>
+<h3>Ramo 130</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 130|$ 100,000|ramo_093.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 094" onclick="ampliarImagen(this.src)" src="ramo_094.jpeg"/>
+<h3>Ramo 131</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 131|$ 100,000|ramo_094.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 101" onclick="ampliarImagen(this.src)" src="ramo_101.jpeg"/>
+<h3>Ramo 132</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 132|$ 100,000|ramo_101.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 102" onclick="ampliarImagen(this.src)" src="ramo_102.jpeg"/>
+<h3>Ramo 133</h3>
+<p>Precio: $ 95.000</p>
+<input type="checkbox" value="Ramo 133|$ 95,000|ramo_102.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 081" onclick="ampliarImagen(this.src)" src="ramo_081.jpeg"/>
+<h3>Ramo 134</h3>
+<p>Precio: $ 95.000</p>
+<input type="checkbox" value="Ramo 134|$ 95,000|ramo_081.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 084" onclick="ampliarImagen(this.src)" src="ramo_084.jpeg"/>
+<h3>Ramo 135</h3>
+<p>Precio: $ 95.000</p>
+<input type="checkbox" value="Ramo 135|$ 95,000|ramo_084.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 085" onclick="ampliarImagen(this.src)" src="ramo_085.jpeg"/>
+<h3>Ramo 136</h3>
+<p>Precio: $90.000</p>
+<input type="checkbox" value="Ramo 136|$ 90,000|ramo_085.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 086" onclick="ampliarImagen(this.src)" src="ramo_086.jpeg"/>
+<h3>Ramo 137</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 137|$ 100,000|ramo_086.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 092" onclick="ampliarImagen(this.src)" src="ramo_092.jpeg"/>
+<h3>Ramo 138</h3>
+<p>Precio: $ 95.000</p>
+<input type="checkbox" value="Ramo 138|$ 95,000|ramo_092.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 095" onclick="ampliarImagen(this.src)" src="ramo_095.jpeg"/>
+<h3>Ramo 139</h3>
+<p>Precio: $ 95.000</p>
+<input type="checkbox" value="Ramo 139|$ 95,000|ramo_095.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 097" onclick="ampliarImagen(this.src)" src="ramo_097.jpeg"/>
+<h3>Ramo 140</h3>
+<p>Precio: $ 95.000</p>
+<input type="checkbox" value="Ramo 140|$ 95,000|ramo_097.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 124" onclick="ampliarImagen(this.src)" src="ramo_124.jpeg"/>
+<h3>Ramo 141</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 141|$ 100,000|ramo_124.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 130" onclick="ampliarImagen(this.src)" src="ramo_130.jpeg"/>
+<h3>Ramo 142</h3>
+<p>Precio: $ 95.000</p>
+<input type="checkbox" value="Ramo 142|$ 95,000|ramo_130.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 096" onclick="ampliarImagen(this.src)" src="ramo_096.jpeg"/>
+<h3>Ramo 143</h3>
+<p>Precio: $ 90.000</p>
+<input type="checkbox" value="Ramo 143|$ 90,000|ramo_096.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 113" onclick="ampliarImagen(this.src)" src="ramo_113.jpeg"/>
+<h3>Ramo 144</h3>
+<p>Precio: $ 90.000</p>
+<input type="checkbox" value="Ramo 144|$ 90,000|ramo_113.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 123" onclick="ampliarImagen(this.src)" src="ramo_123.jpeg"/>
+<h3>Ramo 145</h3>
+<p>Precio: $ 90.000</p>
+<input type="checkbox" value="Ramo 145|$ 90,000|ramo_123.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 125" onclick="ampliarImagen(this.src)" src="ramo_125.jpeg"/>
+<h3>Ramo 146</h3>
+<p>Precio: $ 85.000</p>
+<input type="checkbox" value="Ramo 146|$ 85,000|ramo_125.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 126" onclick="ampliarImagen(this.src)" src="ramo_126.jpeg"/>
+<h3>Ramo 147</h3>
+<p>Precio: $ 85.000</p>
+<input type="checkbox" value="Ramo 147|$ 85,000|ramo_126.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 100" onclick="ampliarImagen(this.src)" src="ramo_100.jpeg"/>
+<h3>Ramo 148</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 148|$ 80,000|ramo_100.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 103" onclick="ampliarImagen(this.src)" src="ramo_103.jpeg"/>
+<h3>Ramo 149</h3>
+<p>Precio: $ 90.000</p>
+<input type="checkbox" value="Ramo 149|$ 90,000|ramo_103.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 104" onclick="ampliarImagen(this.src)" src="ramo_104.jpeg"/>
+<h3>Ramo 150</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 150|$ 80,000|ramo_104.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 106" onclick="ampliarImagen(this.src)" src="ramo_106.jpeg"/>
+<h3>Ramo 151</h3>
+<p>Precio: $ 85.000</p>
+<input type="checkbox" value="Ramo 151|$ 85,000|ramo_106.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 107" onclick="ampliarImagen(this.src)" src="ramo_107.jpeg"/>
+<h3>Ramo 152</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 152|$ 80,000|ramo_107.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 116" onclick="ampliarImagen(this.src)" src="ramo_116.jpeg"/>
+<h3>Ramo 153</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 153|$ 80,000|ramo_116.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 119" onclick="ampliarImagen(this.src)" src="ramo_119.jpeg"/>
+<h3>Ramo 154</h3>
+<p>Precio: $ 90.000</p>
+<input type="checkbox" value="Ramo 154|$ 90,000|ramo_119.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 127" onclick="ampliarImagen(this.src)" src="ramo_127.jpeg"/>
+<h3>Ramo 155</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 155|$ 80,000|ramo_127.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 128" onclick="ampliarImagen(this.src)" src="ramo_128.jpeg"/>
+<h3>Ramo 156</h3>
+<p>Precio: $ 85.000</p>
+<input type="checkbox" value="Ramo 156|$ 85,000|ramo_128.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 143" onclick="ampliarImagen(this.src)" src="ramo_143.jpeg"/>
+<h3>Ramo 157</h3>
+<p>Precio: $ 100.000</p>
+<input type="checkbox" value="Ramo 157|$ 100,000|ramo_143.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 158" onclick="ampliarImagen(this.src)" src="ramo_158.jpeg"/>
+<h3>Ramo 158</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 158|$ 80,000|ramo_158.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 118" onclick="ampliarImagen(this.src)" src="ramo_118.jpeg"/>
+<h3>Ramo 159</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 159|$ 75,000|ramo_118.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 129" onclick="ampliarImagen(this.src)" src="ramo_129.jpeg"/>
+<h3>Ramo 160</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 160|$ 80,000|ramo_129.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 132" onclick="ampliarImagen(this.src)" src="ramo_132.jpeg"/>
+<h3>Ramo 161</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 161|$ 80,000|ramo_132.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 134" onclick="ampliarImagen(this.src)" src="ramo_134.jpeg"/>
+<h3>Ramo 162</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 162|$ 75,000|ramo_134.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 135" onclick="ampliarImagen(this.src)" src="ramo_135.jpeg"/>
+<h3>Ramo 163</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 163|$ 80,000|ramo_135.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 136" onclick="ampliarImagen(this.src)" src="ramo_136.jpeg"/>
+<h3>Ramo 164</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 164|$ 75,000|ramo_136.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 141" onclick="ampliarImagen(this.src)" src="ramo_141.jpeg"/>
+<h3>Ramo 165</h3>
+<p>Precio: $ 90.000</p>
+<input type="checkbox" value="Ramo 165|$ 90,000|ramo_141.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 145" onclick="ampliarImagen(this.src)" src="ramo_145.jpeg"/>
+<h3>Ramo 166</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 166|$ 75,000|ramo_145.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 149" onclick="ampliarImagen(this.src)" src="ramo_149.jpeg"/>
+<h3>Ramo 167</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 167|$ 75,000|ramo_149.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 183" onclick="ampliarImagen(this.src)" src="ramo_183.jpeg"/>
+<h3>Ramo 168</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 168|$ 75,000|ramo_183.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 148" onclick="ampliarImagen(this.src)" src="ramo_148.jpeg"/>
+<h3>Ramo 169</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 169|$ 70,000|ramo_148.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 150" onclick="ampliarImagen(this.src)" src="ramo_150.jpeg"/>
+<h3>Ramo 170</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 170|$ 75,000|ramo_150.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 151" onclick="ampliarImagen(this.src)" src="ramo_151.jpeg"/>
+<h3>Ramo 171</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 171|$ 70,000|ramo_151.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 154" onclick="ampliarImagen(this.src)" src="ramo_154.jpeg"/>
+<h3>Ramo 172</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 172|$ 75,000|ramo_154.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 156" onclick="ampliarImagen(this.src)" src="ramo_156.jpeg"/>
+<h3>Ramo 173</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 173|$ 70,000|ramo_156.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 159" onclick="ampliarImagen(this.src)" src="ramo_159.jpeg"/>
+<h3>Ramo 174</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 174|$ 70,000|ramo_159.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 162" onclick="ampliarImagen(this.src)" src="ramo_162.jpeg"/>
+<h3>Ramo 175</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 175|$ 70,000|ramo_162.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 171" onclick="ampliarImagen(this.src)" src="ramo_171.jpeg"/>
+<h3>Ramo 176</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 176|$ 70,000|ramo_171.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 176" onclick="ampliarImagen(this.src)" src="ramo_176.jpeg"/>
+<h3>Ramo 177</h3>
+<p>Precio: $ 90.000</p>
+<input type="checkbox" value="Ramo 177|$ 90,000|ramo_176.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 139" onclick="ampliarImagen(this.src)" src="ramo_139.jpeg"/>
+<h3>Ramo 178</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 178|$ 80,000|ramo_139.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 155" onclick="ampliarImagen(this.src)" src="ramo_155.jpeg"/>
+<h3>Ramo 179</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 179|$ 70,000|ramo_155.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 160" onclick="ampliarImagen(this.src)" src="ramo_160.jpeg"/>
+<h3>Ramo 180</h3>
+<p>Precio: $ 65.000</p>
+<input type="checkbox" value="Ramo 180|$ 65,000|ramo_160.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 164" onclick="ampliarImagen(this.src)" src="ramo_164.jpeg"/>
+<h3>Ramo 181</h3>
+<p>Precio: $ 80.000</p>
+<input type="checkbox" value="Ramo 181|$ 80,000|ramo_164.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 165" onclick="ampliarImagen(this.src)" src="ramo_165.jpeg"/>
+<h3>Ramo 182</h3>
+<p>Precio: $ 65.000</p>
+<input type="checkbox" value="Ramo 182|$ 65,000|ramo_165.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 167" onclick="ampliarImagen(this.src)" src="ramo_167.jpeg"/>
+<h3>Ramo 183</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 183|$ 70,000|ramo_167.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 169" onclick="ampliarImagen(this.src)" src="ramo_169.jpeg"/>
+<h3>Ramo 184</h3>
+<p>Precio: $ 75.000</p>
+<input type="checkbox" value="Ramo 184|$ 75,000|ramo_169.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 172" onclick="ampliarImagen(this.src)" src="ramo_172.jpeg"/>
+<h3>Ramo 185</h3>
+<p>Precio: $ 65.000</p>
+<input type="checkbox" value="Ramo 185|$ 65,000|ramo_172.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 173" onclick="ampliarImagen(this.src)" src="ramo_173.jpeg"/>
+<h3>Ramo 186</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 186|$ 60,000|ramo_173.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 178" onclick="ampliarImagen(this.src)" src="ramo_178.jpeg"/>
+<h3>Ramo 187</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 187|$ 60,000|ramo_178.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 179" onclick="ampliarImagen(this.src)" src="ramo_179.jpeg"/>
+<h3>Ramo 188</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 188|$ 60,000|ramo_179.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 180" onclick="ampliarImagen(this.src)" src="ramo_180.jpeg"/>
+<h3>Ramo 189</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 189|$ 60,000|ramo_180.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 181" onclick="ampliarImagen(this.src)" src="ramo_181.jpeg"/>
+<h3>Ramo 190</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 190|$ 60,000|ramo_181.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 184" onclick="ampliarImagen(this.src)" src="ramo_184.jpeg"/>
+<h3>Ramo 191</h3>
+<p>Precio: $ 65.000</p>
+<input type="checkbox" value="Ramo 191|$ 65,000|ramo_184.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 186" onclick="ampliarImagen(this.src)" src="ramo_186.jpeg"/>
+<h3>Ramo 192</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 192|$ 60,000|ramo_186.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 192" onclick="ampliarImagen(this.src)" src="ramo_192.jpeg"/>
+<h3>Ramo 193</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 193|$ 60,000|ramo_192.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 168" onclick="ampliarImagen(this.src)" src="ramo_168.jpeg"/>
+<h3>Ramo 194</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 194|$ 60,000|ramo_168.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 189" onclick="ampliarImagen(this.src)" src="ramo_189.jpeg"/>
+<h3>Ramo 195</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 195|$ 60,000|ramo_189.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 190" onclick="ampliarImagen(this.src)" src="ramo_190.jpeg"/>
+<h3>Ramo 196</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 196|$ 60,000|ramo_190.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 191" onclick="ampliarImagen(this.src)" src="ramo_191.jpeg"/>
+<h3>Ramo 197</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 197|$ 60,000|ramo_191.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 194" onclick="ampliarImagen(this.src)" src="ramo_194.jpeg"/>
+<h3>Ramo 198</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 198|$ 60,000|ramo_194.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 197" onclick="ampliarImagen(this.src)" src="ramo_197.jpeg"/>
+<h3>Ramo 199</h3>
+<p>Precio: $ 70.000</p>
+<input type="checkbox" value="Ramo 199|$ 70,000|ramo_197.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 193" onclick="ampliarImagen(this.src)" src="ramo_193.jpeg"/>
+<h3>Ramo 200</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 200|$ 50,000|ramo_193.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 198" onclick="ampliarImagen(this.src)" src="ramo_198.jpeg"/>
+<h3>Ramo 201</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 201|$ 50,000|ramo_198.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 200" onclick="ampliarImagen(this.src)" src="ramo_200.jpeg"/>
+<h3>Ramo 202</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 202|$ 50,000|ramo_200.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 202" onclick="ampliarImagen(this.src)" src="ramo_202.jpeg"/>
+<h3>Ramo 203</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 203|$ 50,000|ramo_202.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 203" onclick="ampliarImagen(this.src)" src="ramo_203.jpeg"/>
+<h3>Ramo 204</h3>
+<p>Precio: $ 60.000</p>
+<input type="checkbox" value="Ramo 204|$ 60,000|ramo_203.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 205" onclick="ampliarImagen(this.src)" src="ramo_205.jpeg"/>
+<h3>Ramo 205</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 205|$ 50,000|ramo_205.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 208" onclick="ampliarImagen(this.src)" src="ramo_208.jpeg"/>
+<h3>Ramo 206</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 206|$ 50,000|ramo_208.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 201" onclick="ampliarImagen(this.src)" src="ramo_201.jpeg"/>
+<h3>Ramo 207</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 207|$ 50,000|ramo_201.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 206" onclick="ampliarImagen(this.src)" src="ramo_206.jpeg"/>
+<h3>Ramo 208</h3>
+<p>Precio: $ 45.000</p>
+<input type="checkbox" value="Ramo 208|$ 45,000|ramo_206.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 210" onclick="ampliarImagen(this.src)" src="ramo_210.jpeg"/>
+<h3>Ramo 209</h3>
+<p>Precio: $ 45.000</p>
+<input type="checkbox" value="Ramo 209|$ 45,000|ramo_210.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 211" onclick="ampliarImagen(this.src)" src="ramo_211.jpeg"/>
+<h3>Ramo 210</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 210|$ 50,000|ramo_211.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 212" onclick="ampliarImagen(this.src)" src="ramo_212.jpeg"/>
+<h3>Ramo 211</h3>
+<p>Precio: $ 50.000</p>
+<input type="checkbox" value="Ramo 211|$ 50,000|ramo_212.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 213" onclick="ampliarImagen(this.src)" src="ramo_213.jpeg"/>
+<h3>Ramo 212</h3>
+<p>Precio: $ 45.000</p>
+<input type="checkbox" value="Ramo 212|$ 45,000|ramo_213.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 209" onclick="ampliarImagen(this.src)" src="ramo_209.jpeg"/>
+<h3>Ramo 213</h3>
+<p>Precio: $ 40.000</p>
+<input type="checkbox" value="Ramo 213|$ 40,000|ramo_209.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 214" onclick="ampliarImagen(this.src)" src="ramo_214.jpeg"/>
+<h3>Ramo 214</h3>
+<p>Precio: $ 35.000</p>
+<input type="checkbox" value="Ramo 214|$ 35,000|ramo_214.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 215" onclick="ampliarImagen(this.src)" src="ramo_215.jpeg"/>
+<h3>Ramo 215</h3>
+<p>Precio: $ 35.000</p>
+<input type="checkbox" value="Ramo 215|$ 35,000|ramo_215.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 216" onclick="ampliarImagen(this.src)" src="ramo_216.jpeg"/>
+<h3>Ramo 216</h3>
+<p>Precio: $ 35.000</p>
+<input type="checkbox" value="Ramo 216|$ 35,000|ramo_216.jpeg"/> Seleccionar
+    </div><div class="producto">
+<img alt="Ramo 224" onclick="ampliarImagen(this.src)" src="ramo_224.jpeg"/>
+<h3>Ramo 217</h3>
+<p>Precio: $ 35.000</p>
+<input type="checkbox" value="Ramo 217|$ 35,000|ramo_224.jpeg"/> Seleccionar
+    </div></main>
+<section id="rosas-eternas" class="catalogo" style="display:none">
+ 
+    <div class="producto">
+  <img src="Rosa Eterna 001.jpg" alt="Rosa Eterna 001" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 001</h3>
+  <p>Precio: $ 175.000</p>
+  <input type="checkbox" value="Rosa Eterna 001
+$ 175,000
+Rosa Eterna 001.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 002.jpg" alt="Rosa Eterna 002" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 002</h3>
+  <p>Precio: $ 180.000</p>
+  <input type="checkbox" value="Rosa Eterna 002
+$ 180,000
+Rosa Eterna 002.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 003.jpg" alt="Rosa Eterna 003" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 003</h3>
+  <p>Precio: $ 185.000</p>
+  <input type="checkbox" value="Rosa Eterna 003
+$ 185,000
+Rosa Eterna 003.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 004.jpg" alt="Rosa Eterna 004" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 004</h3>
+  <p>Precio: $ 190.000</p>
+  <input type="checkbox" value="Rosa Eterna 004
+$ 190,000
+Rosa Eterna 004.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 005.jpg" alt="Rosa Eterna 005" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 005</h3>
+  <p>Precio: $ 195.000</p>
+  <input type="checkbox" value="Rosa Eterna 005
+$ 195,000
+Rosa Eterna 005.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 006.jpg" alt="Rosa Eterna 006" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 006</h3>
+  <p>Precio: $ 200.000</p>
+  <input type="checkbox" value="Rosa Eterna 006
+$ 200,000
+Rosa Eterna 006.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 007.jpg" alt="Rosa Eterna 007" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 007</h3>
+  <p>Precio: $ 205.000</p>
+  <input type="checkbox" value="Rosa Eterna 007
+$ 205,000
+Rosa Eterna 007.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 008.jpg" alt="Rosa Eterna 008" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 008</h3>
+  <p>Precio: $ 210.000</p>
+  <input type="checkbox" value="Rosa Eterna 008
+$ 210,000
+Rosa Eterna 008.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 009.jpg" alt="Rosa Eterna 009" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 009</h3>
+  <p>Precio: $ 215.000</p>
+  <input type="checkbox" value="Rosa Eterna 009
+$ 215,000
+Rosa Eterna 009.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 010.jpg" alt="Rosa Eterna 010" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 010</h3>
+  <p>Precio: $ 220.000</p>
+  <input type="checkbox" value="Rosa Eterna 010
+$ 220,000
+Rosa Eterna 010.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 011.jpg" alt="Rosa Eterna 011" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 011</h3>
+  <p>Precio: $ 225.000</p>
+  <input type="checkbox" value="Rosa Eterna 011
+$ 225,000
+Rosa Eterna 011.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 012.jpg" alt="Rosa Eterna 012" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 012</h3>
+  <p>Precio: $ 230.000</p>
+  <input type="checkbox" value="Rosa Eterna 012
+$ 230,000
+Rosa Eterna 012.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 013.jpg" alt="Rosa Eterna 013" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 013</h3>
+  <p>Precio: $ 235.000</p>
+  <input type="checkbox" value="Rosa Eterna 013
+$ 235,000
+Rosa Eterna 013.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 014.jpg" alt="Rosa Eterna 014" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 014</h3>
+  <p>Precio: $ 240.000</p>
+  <input type="checkbox" value="Rosa Eterna 014
+$ 240,000
+Rosa Eterna 014.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 015.jpg" alt="Rosa Eterna 015" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 015</h3>
+  <p>Precio: $ 245.000</p>
+  <input type="checkbox" value="Rosa Eterna 015
+$ 245,000
+Rosa Eterna 015.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 016.jpg" alt="Rosa Eterna 016" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 016</h3>
+  <p>Precio: $ 250.000</p>
+  <input type="checkbox" value="Rosa Eterna 016
+$ 250,000
+Rosa Eterna 016.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 017.jpg" alt="Rosa Eterna 017" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 017</h3>
+  <p>Precio: $ 255.000</p>
+  <input type="checkbox" value="Rosa Eterna 017
+$ 255,000
+Rosa Eterna 017.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 018.jpg" alt="Rosa Eterna 018" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 018</h3>
+  <p>Precio: $ 260.000</p>
+  <input type="checkbox" value="Rosa Eterna 018
+$ 260,000
+Rosa Eterna 018.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 019.jpg" alt="Rosa Eterna 019" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 019</h3>
+  <p>Precio: $ 265.000</p>
+  <input type="checkbox" value="Rosa Eterna 019
+$ 265,000
+Rosa Eterna 019.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 020.jpg" alt="Rosa Eterna 020" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 020</h3>
+  <p>Precio: $ 270.000</p>
+  <input type="checkbox" value="Rosa Eterna 020
+$ 270,000
+Rosa Eterna 020.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 021.jpg" alt="Rosa Eterna 021" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 021</h3>
+  <p>Precio: $ 275.000</p>
+  <input type="checkbox" value="Rosa Eterna 021
+$ 275,000
+Rosa Eterna 021.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 022.jpg" alt="Rosa Eterna 022" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 022</h3>
+  <p>Precio: $ 280.000</p>
+  <input type="checkbox" value="Rosa Eterna 022
+$ 280,000
+Rosa Eterna 022.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 023.jpg" alt="Rosa Eterna 023" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 023</h3>
+  <p>Precio: $ 285.000</p>
+  <input type="checkbox" value="Rosa Eterna 023
+$ 285,000
+Rosa Eterna 023.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 024.jpg" alt="Rosa Eterna 024" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 024</h3>
+  <p>Precio: $ 290.000</p>
+  <input type="checkbox" value="Rosa Eterna 024
+$ 290,000
+Rosa Eterna 024.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 025.jpg" alt="Rosa Eterna 025" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 025</h3>
+  <p>Precio: $ 295.000</p>
+  <input type="checkbox" value="Rosa Eterna 025
+$ 295,000
+Rosa Eterna 025.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 026.jpg" alt="Rosa Eterna 026" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 026</h3>
+  <p>Precio: $ 300.000</p>
+  <input type="checkbox" value="Rosa Eterna 026
+$ 300,000
+Rosa Eterna 026.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 027.jpg" alt="Rosa Eterna 027" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 027</h3>
+  <p>Precio: $ 305.000</p>
+  <input type="checkbox" value="Rosa Eterna 027
+$ 305,000
+Rosa Eterna 027.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 028.jpg" alt="Rosa Eterna 028" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 028</h3>
+  <p>Precio: $ 310.000</p>
+  <input type="checkbox" value="Rosa Eterna 028
+$ 310,000
+Rosa Eterna 028.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 029.jpg" alt="Rosa Eterna 029" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 029</h3>
+  <p>Precio: $ 315.000</p>
+  <input type="checkbox" value="Rosa Eterna 029
+$ 315,000
+Rosa Eterna 029.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 030.jpg" alt="Rosa Eterna 030" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 030</h3>
+  <p>Precio: $ 320.000</p>
+  <input type="checkbox" value="Rosa Eterna 030
+$ 320,000
+Rosa Eterna 030.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 031.jpg" alt="Rosa Eterna 031" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 031</h3>
+  <p>Precio: $ 325.000</p>
+  <input type="checkbox" value="Rosa Eterna 031
+$ 325,000
+Rosa Eterna 031.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 032.jpg" alt="Rosa Eterna 032" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 032</h3>
+  <p>Precio: $ 330.000</p>
+  <input type="checkbox" value="Rosa Eterna 032
+$ 330,000
+Rosa Eterna 032.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 033.jpg" alt="Rosa Eterna 033" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 033</h3>
+  <p>Precio: $ 335.000</p>
+  <input type="checkbox" value="Rosa Eterna 033
+$ 335,000
+Rosa Eterna 033.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 034.jpg" alt="Rosa Eterna 034" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 034</h3>
+  <p>Precio: $ 340.000</p>
+  <input type="checkbox" value="Rosa Eterna 034
+$ 340,000
+Rosa Eterna 034.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 035.jpg" alt="Rosa Eterna 035" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 035</h3>
+  <p>Precio: $ 345.000</p>
+  <input type="checkbox" value="Rosa Eterna 035
+$ 345,000
+Rosa Eterna 035.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 036.jpg" alt="Rosa Eterna 036" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 036</h3>
+  <p>Precio: $ 350.000</p>
+  <input type="checkbox" value="Rosa Eterna 036
+$ 350,000
+Rosa Eterna 036.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 037.jpg" alt="Rosa Eterna 037" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 037</h3>
+  <p>Precio: $ 355.000</p>
+  <input type="checkbox" value="Rosa Eterna 037
+$ 355,000
+Rosa Eterna 037.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 038.jpg" alt="Rosa Eterna 038" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 038</h3>
+  <p>Precio: $ 360.000</p>
+  <input type="checkbox" value="Rosa Eterna 038
+$ 360,000
+Rosa Eterna 038.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 039.jpg" alt="Rosa Eterna 039" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 039</h3>
+  <p>Precio: $ 365.000</p>
+  <input type="checkbox" value="Rosa Eterna 039
+$ 365,000
+Rosa Eterna 039.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 040.jpg" alt="Rosa Eterna 040" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 040</h3>
+  <p>Precio: $ 370.000</p>
+  <input type="checkbox" value="Rosa Eterna 040
+$ 370,000
+Rosa Eterna 040.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 041.jpg" alt="Rosa Eterna 041" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 041</h3>
+  <p>Precio: $ 375.000</p>
+  <input type="checkbox" value="Rosa Eterna 041
+$ 375,000
+Rosa Eterna 041.jpg"> Seleccionar
+</div>
+
+<div class="producto">
+  <img src="Rosa Eterna 042.jpg" alt="Rosa Eterna 042" onclick="ampliarImagen(this.src)">
+  <h3>Rosa Eterna 042</h3>
+  <p>Precio: $ 380.000</p>
+  <input type="checkbox" value="Rosa Eterna 042
+$ 380,000
+Rosa Eterna 042.jpg"> Seleccionar
+</div>
+
+</section>
+
+<div class="modal" id="modal" onclick="cerrarModal()">
+<img id="imagenModal" src=""/>
+</div>
+<button class="btn-enviar" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+<script>
+  function enviarWhatsApp() {
+    const checks = document.querySelectorAll('input[type=checkbox]:checked');
+    if (checks.length === 0) {
+      alert("Selecciona al menos un ramo.");
+      return;
+    }
+    let mensaje = "Hola, estoy interesado en los siguientes ramos:%0A";
+    checks.forEach(chk => {
+      let [nombre, precio, imagen] = chk.value.split("|");
+      const url = window.location.href.replace(/\/[^\/]*$/, '/') + imagen;
+      mensaje += `🧾 ${nombre} - ${precio}%0A📸 ${url}%0A%0A`;
+    });
+    const numero = "573208533423";
+    const url = `https://wa.me/${numero}?text=${mensaje}`;
+    window.open(url, "_blank");
+  }
+
+  function ampliarImagen(src) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("imagenModal");
+    modal.style.display = "flex";
+    modalImg.src = src;
+  }
+
+  function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+// ---- Agregado: mostrar secciones (Arreglos Naturales / Rosas Eternas) ----
+function mostrarSeccion(tipo) {
+  const naturales = document.querySelector('main.catalogo');
+  const eternas = document.getElementById('rosas-eternas');
+  const btnNat = document.getElementById('btn-naturales');
+  const btnEte = document.getElementById('btn-eternas');
+  if (tipo === 'naturales') {
+    naturales.style.display = 'grid';
+    if (eternas) eternas.style.display = 'none';
+    if (btnNat) btnNat.classList.add('activo');
+    if (btnEte) btnEte.classList.remove('activo');
+  } else {
+    naturales.style.display = 'none';
+    if (eternas) eternas.style.display = 'grid';
+    if (btnEte) btnEte.classList.add('activo');
+    if (btnNat) btnNat.classList.remove('activo');
+  }
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() { mostrarSeccion('naturales'); });
+} else {
+  mostrarSeccion('naturales');
+}
+
+
+// === ORDEN POR PRECIO (mayor → menor) ===
+function __numeroDesdeTextoPrecio(t){
+  var s = (t||'').toString().replace(/[^\d]/g,'');
+  return s ? parseInt(s,10) : 0;
+}
+function __precioDeProducto(card){
+  // 1) data-precio (si está)
+  var dp = card.getAttribute('data-precio');
+  if (dp && !isNaN(parseInt(dp,10))) return parseInt(dp,10);
+  // 2) <p>Precio: $ ...
+  var p = card.querySelector('p');
+  if (p){
+    var n = __numeroDesdeTextoPrecio(p.textContent);
+    if (n>0) return n;
+  }
+  // 3) 2da línea del checkbox
+  var chk = card.querySelector('input[type="checkbox"]');
+  if (chk && chk.value){
+    var parts = chk.value.split('\n');
+    if (parts.length>=2){
+      var n2 = __numeroDesdeTextoPrecio(parts[1]);
+      if (n2>0) return n2;
+    }
+  }
+  return 0;
+}
+function ordenarSeccionPorPrecioDesc(contenedor){
+  if (!contenedor) return;
+  var cards = Array.prototype.slice.call(contenedor.querySelectorAll(':scope > .producto'));
+  if (cards.length<=1) return;
+  cards.sort(function(a,b){ return __precioDeProducto(b) - __precioDeProducto(a); });
+  cards.forEach(function(c){ contenedor.appendChild(c); });
+}
+(function(){
+  // Orden inicial al cargar
+  function ordenarTodo(){
+    ordenarSeccionPorPrecioDesc(document.querySelector('main.catalogo'));
+    ordenarSeccionPorPrecioDesc(document.getElementById('rosas-eternas'));
+  }
+  if (document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', ordenarTodo);
+  } else {
+    ordenarTodo();
+  }
+})();
+
+
+// === PRECIOS DESDE GOOGLE SHEETS (CSV) ===
+// Instrucciones:
+// 1) En Google Sheets: Archivo → Compartir → Publicar en la Web → Hoja específica.
+// 2) Copia el ID del documento (entre /d/ y /edit) y el gid de la hoja publicada.
+// 3) Reemplaza SHEET_ID y SHEET_GID aquí abajo.
+const SHEET_ID = '1qmgltdkRTLAq2HzI1UVxrcGKpXwIuIw4iRBUvjrICwQ';
+const SHEET_GID = '319177963';
+
+function __parseCSV(text){
+  const maybeSemicolon = text.indexOf(';')>-1;
+  const maybeComma = text.indexOf(',')>-1;
+  const sep = (maybeSemicolon && !maybeComma) ? ';' : ',';
+  const lines = text.split(/\r?\n/).filter(Boolean);
+  if (!lines.length) return [];
+  const headers = lines.shift().split(sep).map(h=>h.trim().toLowerCase());
+  return lines.map(l=>{
+    const c = l.split(sep).map(x=>x.trim());
+    const obj = {};
+    headers.forEach((h,i)=> obj[h] = (c[i]||''));
+    return obj;
+  });
+}
+function __fmtCOP(n){ try { return new Intl.NumberFormat('es-CO').format(n); } catch(e){ return n; } }
+async function cargarPreciosDesdeSheets(){
+  if(!SHEET_ID){ console.warn('SHEET_ID vacío; omitiendo carga de precios'); return; }
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}`;
+  try{
+    const resp = await fetch(url, { cache:'no-store' });
+    if(!resp.ok) throw new Error('HTTP '+resp.status);
+    const csv = await resp.text();
+    const rows = __parseCSV(csv);
+    const map = new Map();
+    rows.forEach(r=>{
+      const nombre = (r.nombre||r.Nombre||'').trim();
+      const precioNum = __numeroDesdeTextoPrecio(r.precio||r.Precio||'');
+      if (nombre && precioNum>0) map.set(nombre.toLowerCase(), precioNum);
+    });
+    const contenedores = [document.querySelector('main.catalogo'), document.getElementById('rosas-eternas')];
+    contenedores.forEach(cont=>{
+      if(!cont) return;
+      cont.querySelectorAll(':scope > .producto').forEach(card=>{
+        const h3 = card.querySelector('h3');
+        if(!h3) return;
+        const key = h3.textContent.trim().toLowerCase();
+        if (!map.has(key)) return;
+        const precio = map.get(key);
+        // 1) <p>Precio: $ ...
+        const p = card.querySelector('p');
+        if (p) p.textContent = 'Precio: $ ' + __fmtCOP(precio);
+        // 2) data-precio
+        card.setAttribute('data-precio', String(precio));
+        // 3) checkbox (2da línea)
+        const chk = card.querySelector('input[type="checkbox"]');
+        if (chk && chk.value){
+          const parts = chk.value.split('\n');
+          if (parts.length>=2){ parts[1] = '$ ' + __fmtCOP(precio); chk.value = parts.join('\n'); }
+        }
+      });
+    });
+    // Reordenar después de asignar precios
+    ordenarSeccionPorPrecioDesc(document.querySelector('main.catalogo'));
+    ordenarSeccionPorPrecioDesc(document.getElementById('rosas-eternas'));
+  } catch(err){ console.error('Error cargando precios desde Sheets:', err); }
+}
+// Ejecutar tras el DOM listo (y tras construir secciones)
+document.addEventListener('DOMContentLoaded', ()=> setTimeout(cargarPreciosDesdeSheets, 250));
+
+</script>
+</body>
+</html>
