@@ -1685,6 +1685,7 @@
 <img id="imagenModal" src=""/>
 </div>
 <button class="btn-enviar" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+
 <script>
   function enviarWhatsApp() {
     const checks = document.querySelectorAll('input[type=checkbox]:checked');
@@ -1692,11 +1693,28 @@
       alert("Selecciona al menos un ramo.");
       return;
     }
+
+    // Codifica correctamente cada segmento del path (espacios, tildes, etc.)
+    function safeEncodePath(p) {
+      return String(p || '')
+        .split('/')
+        .map(seg => encodeURIComponent(decodeURIComponent(seg)))
+        .join('/');
+    }
+
+    // Construye la URL absoluta hacia la imagen con el path ya codificado
+    function buildImageUrl(imgPath) {
+      const base = window.location.href.replace(/\/[^\/]*$/, '/');
+      const encodedPath = safeEncodePath(imgPath);
+      return base + encodedPath;
+    }
+
     let mensaje = "Hola, estoy interesado en los siguientes ramos:%0A";
     checks.forEach(chk => {
-      let [nombre, precio, imagen] = chk.value.split("|");
-      const url = window.location.href.replace(/\/[^\/]*$/, '/') + imagen;
-      mensaje += `🧾 ${nombre} - ${precio}%0A📸 ${url}%0A%0A`;
+      let [nombre, precio, imagen] = (chk.value || "").split("|").map(s => (s || "").trim());
+      // Si por alguna razón 'imagen' viniera vacía, no rompemos el link
+      const url = imagen ? buildImageUrl(imagen) : window.location.href;
+      mensaje += `🧾 ${nombre} - ${precio}%0A📸 ${encodeURI(url)}%0A%0A`;
     });
     const numero = "573208533423";
     const url = `https://wa.me/${numero}?text=${mensaje}`;
