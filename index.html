@@ -21,6 +21,26 @@
     .producto p { margin: 5px 0; font-size: 0.95rem; }
     .producto input { margin-top: 10px; }
 
+function ordenarPorPrecio() {
+  const catalogo = document.querySelector(".catalogo");
+  const productos = Array.from(catalogo.querySelectorAll(".producto"));
+
+  productos.sort((a, b) => {
+    const precioA = parseInt(a.querySelector("p").innerText.replace(/\D/g, ""));
+    const precioB = parseInt(b.querySelector("p").innerText.replace(/\D/g, ""));
+    return precioB - precioA;
+  });
+
+  productos.forEach(producto => catalogo.appendChild(producto));
+}
+
+
+
+
+
+
+
+    
     .btn-enviar {
       position: fixed;
       bottom: 20px;
