@@ -16,7 +16,15 @@
     .catalogo { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 30px; }
     .producto { background-color: #1a1a1a; border-radius: 12px; padding: 15px; text-align: center;
                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.05); }
-    .producto img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+    .producto img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      background: #111;
+      border: 1px solid rgba(255, 215, 0, 0.25);
+      border-radius: 10px;
+      display: block;
+    }
     .producto h3 { font-family: 'Playfair Display', serif; color: #FFD700; margin: 10px 0 5px; }
     .producto p { margin: 5px 0; font-size: 0.95rem; }
     .producto input { margin-top: 10px; }
@@ -70,6 +78,9 @@ function ordenarPorPrecio() {
 .social.facebook { background:#1877F2; }
 .social.tiktok { background:#000000; border:1px solid #333; }
 
+@media (max-width: 600px) {
+      .producto img { height: 230px; }
+    }
 </style>
 </head>
 <body>
