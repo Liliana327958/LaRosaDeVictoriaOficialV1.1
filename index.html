@@ -305,6 +305,7 @@ function ordenarPorPrecio() {
   <button class="categoria-portada eternas" onclick="mostrarSeccion('eternas')" type="button">
     <span class="categoria-numero">02 · COLECCIÓN</span>
     <div class="categoria-imagen categoria-imagen-video" aria-label="Escaparate animado de rosas eternas">
+    
       <img class="slide-ramo" src="Rosa Eterna 024.jpg" alt="Rosa Eterna 024" loading="lazy"/>
       <img class="slide-ramo" src="Rosa Eterna 026.jpg" alt="Rosa Eterna 026" loading="lazy"/>
       <img class="slide-ramo" src="Rosa Eterna 009.jpg" alt="Rosa Eterna 009" loading="lazy"/>
@@ -1975,6 +1976,7 @@ function ordenarPorPrecio() {
 
     // Construye la URL absoluta hacia la imagen con el path ya codificado
     function buildImageUrl(imgPath) {
+      if (/^https?:\/\//i.test(String(imgPath || ''))) return String(imgPath);
       const base = window.location.href.replace(/\/[^\/]*$/, '/');
       const encodedPath = safeEncodePath(imgPath);
       return base + encodedPath;
@@ -2132,6 +2134,7 @@ function __parseCSV(text){
 }
 function __fmtCOP(n){ try { return new Intl.NumberFormat('es-CO').format(n); } catch(e){ return n; } }
 async function cargarPreciosDesdeSheets(){
+  if (window.LA_ROSA_USE_SUPABASE) return;
   if(!SHEET_ID){ console.warn('SHEET_ID vacío; omitiendo carga de precios'); return; }
   const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}`;
   try{
@@ -2176,5 +2179,60 @@ async function cargarPreciosDesdeSheets(){
 document.addEventListener('DOMContentLoaded', ()=> setTimeout(cargarPreciosDesdeSheets, 250));
 
 </script>
+
+<!-- Conexión opcional a Supabase. No pegues aquí una service_role key; solo la clave publicable/anon. -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  window.LA_ROSA_SUPABASE_URL = 'https://fibxmskyumqqweabkrsr.supabase.co';
+  window.LA_ROSA_SUPABASE_ANON_KEY = 'sb_publishable_MYTRegGq5oKGNfHrnxKPcA_8-2Wb4pK';
+ 
+window.LA_ROSA_USE_SUPABASE = Boolean(
+  window.LA_ROSA_SUPABASE_URL &&
+  window.LA_ROSA_SUPABASE_URL.startsWith('https://') &&
+  window.LA_ROSA_SUPABASE_ANON_KEY &&
+  window.LA_ROSA_SUPABASE_ANON_KEY.startsWith('sb_publishable_')
+);
+  (async function conectarCatalogoSupabase(){
+    if (!window.LA_ROSA_USE_SUPABASE || !window.supabase) return;
+    try {
+      const db = window.supabase.createClient(window.LA_ROSA_SUPABASE_URL, window.LA_ROSA_SUPABASE_ANON_KEY);
+      const { data, error } = await db.from('products').select('slug,name,category,price,image_url,active,sort_order').eq('active', true).order('sort_order', {ascending:false});
+      if (error) throw error;
+      if (!Array.isArray(data)) return;
+      const naturales = document.querySelector('main.catalogo');
+      const eternas = document.getElementById('rosas-eternas');
+      if (!naturales || !eternas) return;
+      naturales.replaceChildren();
+      eternas.replaceChildren();
+      const fmt = n => new Intl.NumberFormat('es-CO').format(Number(n) || 0);
+      data.forEach(producto => {
+        const card = document.createElement('div');
+        card.className = 'producto';
+        card.dataset.producto = producto.slug;
+        card.dataset.precio = String(producto.price);
+        const img = document.createElement('img');
+        img.alt = producto.name;
+        img.src = producto.image_url;
+        img.loading = 'lazy';
+        const title = document.createElement('h3'); title.textContent = producto.name;
+        const price = document.createElement('p'); price.textContent = 'Precio: $ ' + fmt(producto.price);
+        const label = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = `${producto.name}|$ ${fmt(producto.price)}|${producto.image_url}`;
+        label.append(checkbox, document.createTextNode(' Seleccionar'));
+        card.append(img, title, price, label);
+        (producto.category === 'eternas' ? eternas : naturales).appendChild(card);
+      });
+      if (typeof ajustarZoomRamos === 'function') ajustarZoomRamos();
+      if (typeof ordenarSeccionPorPrecioDesc === 'function') {
+        ordenarSeccionPorPrecioDesc(naturales); ordenarSeccionPorPrecioDesc(eternas);
+      }
+    } catch (err) {
+      console.error('No se pudo cargar el catálogo desde Supabase. Se conserva el catálogo HTML de respaldo.', err);
+    }
+  })();
+</script>
+
 </body>
 </html>
