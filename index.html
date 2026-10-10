@@ -90,6 +90,8 @@ function ordenarPorPrecio() {
   transition: transform .35s ease;
 }
 .producto { overflow: hidden; }
+/* Permite que la búsqueda y el rango oculten tarjetas aunque .producto tenga display propio. */
+.producto[hidden] { display: none !important; }
 .producto img.zoom-compacto { --zoom-ramo: 1.04; }
 .producto img.zoom-medio { --zoom-ramo: 1.10; }
 .producto img.zoom-cercano { --zoom-ramo: 1.16; }
@@ -359,7 +361,6 @@ function ordenarPorPrecio() {
   <button class="categoria-portada eternas" onclick="mostrarSeccion('eternas')" type="button">
     <span class="categoria-numero">02 · COLECCIÓN</span>
     <div class="categoria-imagen categoria-imagen-video" aria-label="Escaparate animado de rosas eternas">
-
       <img class="slide-ramo" src="Rosa Eterna 024.jpg" alt="Rosa Eterna 024" loading="lazy"/>
       <img class="slide-ramo" src="Rosa Eterna 026.jpg" alt="Rosa Eterna 026" loading="lazy"/>
       <img class="slide-ramo" src="Rosa Eterna 009.jpg" alt="Rosa Eterna 009" loading="lazy"/>
@@ -2174,6 +2175,7 @@ function mostrarSeccion(tipo) {
     if (naturales) naturales.style.display = 'none';
     if (eternas) eternas.style.display = 'grid';
   }
+  if (typeof window.aplicarFiltrosCatalogo === 'function') window.aplicarFiltrosCatalogo();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -2374,46 +2376,112 @@ window.LA_ROSA_USE_SUPABASE = Boolean(
 
 <script id="mejoras-filtros-catalogo">
 (function(){
-  const search = document.getElementById('buscar-producto');
-  const range = document.getElementById('filtro-precio');
-  const sort = document.getElementById('orden-productos');
-  const clear = document.getElementById('limpiar-filtros');
-  const result = document.getElementById('resultado-productos');
-  if (!search || !range || !sort || !clear || !result) return;
-  aplicarPreciosComercialesExistentes();
-  function priceOf(card){ const p=card.querySelector('p'); const n=Number((card.dataset.precio || (p ? p.textContent : '')).toString().replace(/[^0-9]/g,'')); return Number.isFinite(n)?n:0; }
-  function runFilters(){
-    const term=search.value.trim().toLocaleLowerCase('es-CO');
-    const selected=range.value;
-    const containers=[document.querySelector('main.catalogo'),document.getElementById('rosas-eternas')].filter(Boolean);
-    let total=0, shown=0;
-    containers.forEach(container=>{
-      const cards=Array.from(container.querySelectorAll(':scope > .producto')); total+=cards.length;
-      cards.forEach(card=>{
-        const name=(card.querySelector('h3')?.textContent || '').toLocaleLowerCase('es-CO');
-        const price=priceOf(card); let inRange=true;
-        if(selected!=='todos'){ const [min,max]=selected.split('-').map(Number); inRange=price>=min && price<=max; }
-        const visible=name.includes(term)&&inRange; card.hidden=!visible; if(visible) shown++;
+  function iniciarFiltrosCatalogo(){
+    const search = document.getElementById('buscar-producto');
+    const range = document.getElementById('filtro-precio');
+    const sort = document.getElementById('orden-productos');
+    const clear = document.getElementById('limpiar-filtros');
+    const result = document.getElementById('resultado-productos');
+    const natural = document.querySelector('main.catalogo');
+    const eternal = document.getElementById('rosas-eternas');
+    if (!search || !range || !sort || !clear || !result || !natural || !eternal) return;
+
+    aplicarPreciosComercialesExistentes();
+    let nextOrder = 0;
+    function containers(){ return [natural, eternal]; }
+    function cardsOf(container){
+      const cards = Array.from(container.querySelectorAll(':scope > .producto'));
+      cards.forEach(card => {
+        if (card.dataset.filtroOrden === undefined) card.dataset.filtroOrden = String(nextOrder++);
       });
-      const visibleCards=cards.filter(card=>!card.hidden);
-      if(sort.value!=='destacados'){
-        visibleCards.sort((a,b)=>{ if(sort.value==='menor') return priceOf(a)-priceOf(b); if(sort.value==='mayor') return priceOf(b)-priceOf(a); return (a.querySelector('h3')?.textContent||'').localeCompare(b.querySelector('h3')?.textContent||'','es'); });
-        const currentOrder=cards.filter(card=>!card.hidden);
-        if(visibleCards.some((card,index)=>card!==currentOrder[index])) visibleCards.forEach(card=>container.appendChild(card));
+      return cards;
+    }
+    function priceOf(card){
+      const p = card.querySelector('p');
+      const raw = card.dataset.precio || card.dataset.precioOriginal || (p ? p.textContent : '');
+      const n = Number(String(raw).replace(/[^0-9]/g, ''));
+      return Number.isFinite(n) ? n : 0;
+    }
+    function activeContainer(){
+      if (natural.style.display !== 'none') return natural;
+      if (eternal.style.display !== 'none') return eternal;
+      return null;
+    }
+    function sortCards(container, cards){
+      const mode = sort.value;
+      if (mode === 'menor') cards.sort((a,b) => priceOf(a)-priceOf(b));
+      else if (mode === 'mayor') cards.sort((a,b) => priceOf(b)-priceOf(a));
+      else if (mode === 'nombre') cards.sort((a,b) => (a.querySelector('h3')?.textContent || '').trim().localeCompare((b.querySelector('h3')?.textContent || '').trim(), 'es', {sensitivity:'base'}));
+      else cards.sort((a,b) => Number(a.dataset.filtroOrden)-Number(b.dataset.filtroOrden));
+      // Solo mueve tarjetas cuando el orden realmente cambió; evita ciclos con MutationObserver.
+      const current = Array.from(container.querySelectorAll(':scope > .producto'));
+      if (cards.some((card, i) => card !== current[i])) cards.forEach(card => container.appendChild(card));
+    }
+    function runFilters(){
+      const term = search.value.trim().toLocaleLowerCase('es-CO');
+      const selected = range.value;
+      let activeTotal = 0, activeShown = 0;
+      containers().forEach(container => {
+        const cards = cardsOf(container);
+        cards.forEach(card => {
+          const name = (card.querySelector('h3')?.textContent || '').trim().toLocaleLowerCase('es-CO');
+          const price = priceOf(card);
+          let inRange = true;
+          if (selected !== 'todos') {
+            const parts = selected.split('-').map(Number);
+            inRange = price >= parts[0] && price <= parts[1];
+          }
+          card.hidden = !(name.includes(term) && inRange);
+        });
+        sortCards(container, cards);
+        if (container === activeContainer()) {
+          activeTotal = cards.length;
+          activeShown = cards.filter(card => !card.hidden).length;
+        }
+      });
+      result.textContent = activeTotal === activeShown
+        ? `${activeShown} diseños disponibles`
+        : `${activeShown} de ${activeTotal} diseños`;
+      let empty = document.getElementById('sin-resultados-catalogo');
+      const active = activeContainer();
+      if (!empty) {
+        empty = document.createElement('p');
+        empty.id = 'sin-resultados-catalogo';
+        empty.textContent = 'No encontramos diseños con esos filtros. Prueba otra búsqueda.';
+        empty.style.cssText = 'grid-column:1/-1;text-align:center;color:#aaa;padding:35px 15px';
+      }
+      if (active && activeShown === 0) active.appendChild(empty);
+      else if (empty.parentNode) empty.remove();
+    }
+    window.aplicarFiltrosCatalogo = runFilters;
+    search.addEventListener('input', runFilters);
+    range.addEventListener('change', runFilters);
+    sort.addEventListener('change', runFilters);
+    clear.addEventListener('click', () => {
+      search.value = '';
+      range.value = 'todos';
+      sort.value = 'destacados';
+      runFilters();
+      search.focus();
+    });
+
+    // Supabase reemplaza las tarjetas al cargar. Observamos cambios en la cantidad
+    // de productos, no cada movimiento de ordenamiento (evita que los filtros se bloqueen).
+    let previousCards = new Set(containers().flatMap(container => Array.from(container.querySelectorAll(':scope > .producto'))));
+    const observer = new MutationObserver(() => {
+      const currentCards = containers().flatMap(container => Array.from(container.querySelectorAll(':scope > .producto')));
+      const currentSet = new Set(currentCards);
+      const productSetChanged = currentSet.size !== previousCards.size || currentCards.some(card => !previousCards.has(card));
+      if (productSetChanged) {
+        previousCards = currentSet;
+        runFilters();
       }
     });
-    result.textContent=shown===total ? `${shown} diseños disponibles` : `${shown} de ${total} diseños`;
-    let empty=document.getElementById('sin-resultados-catalogo');
-    const active=document.querySelector('main.catalogo').style.display!=='none' ? document.querySelector('main.catalogo') : document.getElementById('rosas-eternas');
-    if(!empty){ empty=document.createElement('p'); empty.id='sin-resultados-catalogo'; empty.textContent='No encontramos diseños con esos filtros. Prueba otra búsqueda.'; empty.style.cssText='grid-column:1/-1;text-align:center;color:#aaa;padding:35px 15px'; }
-    if(active && shown===0) active.appendChild(empty); else empty.remove();
+    containers().forEach(container => observer.observe(container, {childList:true}));
+    runFilters();
   }
-  search.addEventListener('input',runFilters); range.addEventListener('change',runFilters); sort.addEventListener('change',runFilters);
-  clear.addEventListener('click',()=>{search.value='';range.value='todos';sort.value='destacados';runFilters();search.focus();});
-  // Supabase sustituye las tarjetas al cargar; se actualiza el contador sin cambiar los precios originales.
-  const observer=new MutationObserver(()=>runFilters());
-  [document.querySelector('main.catalogo'),document.getElementById('rosas-eternas')].filter(Boolean).forEach(el=>observer.observe(el,{childList:true}));
-  document.addEventListener('DOMContentLoaded',runFilters);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciarFiltrosCatalogo, {once:true});
+  else iniciarFiltrosCatalogo();
 })();
 </script>
 
