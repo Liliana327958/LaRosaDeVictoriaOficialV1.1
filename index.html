@@ -321,6 +321,97 @@ function ordenarPorPrecio() {
   @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .producto,.categoria-portada,.btn-enviar { transition:none; } .producto:hover,.categoria-portada:hover { transform:none; } }
 </style>
 
+    
+<style>
+/* Visor de detalle de productos */
+.btn-ver-detalle {
+  margin: 12px auto 4px;
+  padding: 10px 18px;
+  border: 1px solid #e8c85a;
+  border-radius: 25px;
+  background: #191919;
+  color: #e8c85a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-ver-detalle:hover {
+  background: #e8c85a;
+  color: #111;
+}
+
+.visor-detalle {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: rgba(0,0,0,.94);
+  box-sizing: border-box;
+}
+
+.visor-detalle.abierto {
+  display: flex;
+}
+
+.visor-contenido {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  max-height: 95vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #e8c85a;
+  border-radius: 18px;
+  background: #111;
+  text-align: center;
+}
+
+.visor-contenido img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.visor-contenido h2 {
+  color: #e8c85a;
+  font-family: 'Playfair Display', serif;
+}
+
+.visor-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: #222;
+  color: white;
+  border: 1px solid #e8c85a;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.visor-volver {
+  margin-top: 15px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 25px;
+  background: #e8c85a;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+
+
 </head>
 <body>
 <header>
@@ -2459,6 +2550,116 @@ window.LA_ROSA_USE_SUPABASE = Boolean(
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciarFiltrosCatalogo, {once:true});
   else iniciarFiltrosCatalogo();
+})();
+</script>
+
+    
+<div id="visor-detalle" class="visor-detalle" role="dialog"
+     aria-modal="true" aria-label="Detalle del arreglo">
+
+  <div class="visor-contenido">
+
+    <button class="visor-cerrar" type="button"
+            onclick="cerrarDetalle()" aria-label="Cerrar">
+      ✕
+    </button>
+
+    <img id="visor-imagen" src="" alt="Arreglo floral">
+
+    <h2 id="visor-nombre"></h2>
+
+    <p id="visor-precio"></p>
+
+    <button class="visor-volver" type="button"
+            onclick="cerrarDetalle()">
+      ← Volver al catálogo
+    </button>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  const visor = document.getElementById('visor-detalle');
+  const imagen = document.getElementById('visor-imagen');
+  const nombre = document.getElementById('visor-nombre');
+  const precio = document.getElementById('visor-precio');
+
+  let botonAnterior = null;
+
+  function agregarBotones() {
+    document.querySelectorAll('.producto').forEach(tarjeta => {
+      if (tarjeta.querySelector('.btn-ver-detalle')) return;
+
+      const boton = document.createElement('button');
+      boton.type = 'button';
+      boton.className = 'btn-ver-detalle';
+      boton.textContent = '🔍 Ver detalle';
+
+      const titulo = tarjeta.querySelector('h3');
+      if (titulo) {
+        titulo.before(boton);
+      } else {
+        tarjeta.appendChild(boton);
+      }
+    });
+  }
+
+  document.addEventListener('click', function (evento) {
+    const boton = evento.target.closest('.btn-ver-detalle');
+    if (!boton) return;
+
+    const tarjeta = boton.closest('.producto');
+    if (!tarjeta) return;
+
+    const foto = tarjeta.querySelector('img');
+    const titulo = tarjeta.querySelector('h3');
+    const valor = tarjeta.querySelector('p');
+
+    if (!foto) return;
+
+    botonAnterior = boton;
+
+    imagen.src = foto.currentSrc || foto.src;
+    imagen.alt = foto.alt || 'Arreglo floral';
+    nombre.textContent = titulo?.textContent || '';
+    precio.textContent = valor?.textContent || '';
+
+    visor.classList.add('abierto');
+    document.body.style.overflow = 'hidden';
+    document.querySelector('.visor-cerrar').focus();
+  });
+
+  window.cerrarDetalle = function () {
+    visor.classList.remove('abierto');
+    document.body.style.overflow = '';
+    imagen.removeAttribute('src');
+    if (botonAnterior?.isConnected) botonAnterior.focus();
+  };
+
+  visor.addEventListener('click', function (evento) {
+    if (evento.target === visor) cerrarDetalle();
+  });
+
+  document.addEventListener('keydown', function (evento) {
+    if (evento.key === 'Escape' && visor.classList.contains('abierto')) {
+      cerrarDetalle();
+    }
+  });
+
+  // Detecta productos nuevos cuando Supabase actualiza el catálogo.
+  const observador = new MutationObserver(agregarBotones);
+
+  const naturales = document.querySelector('main.catalogo');
+  const eternas = document.getElementById('rosas-eternas');
+
+  [naturales, eternas].forEach(contenedor => {
+    if (contenedor) {
+      observador.observe(contenedor, { childList: true });
+    }
+  });
+
+  agregarBotones();
 })();
 </script>
 
