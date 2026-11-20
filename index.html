@@ -324,22 +324,39 @@ function ordenarPorPrecio() {
     
 <style>
 /* Visor de detalle de productos */
+
 .btn-ver-detalle {
-  margin: 12px auto 4px;
-  padding: 10px 18px;
-  border: 1px solid #e8c85a;
-  border-radius: 25px;
-  background: #191919;
-  color: #e8c85a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  margin: 12px 0 8px;
+  padding: 12px 18px;
+  border: 1px solid #d8b65c;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #f0d78a, #c99b3d);
+  color: #17110a;
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: all .25s ease;
 }
 
 .btn-ver-detalle:hover {
-  background: #e8c85a;
-  color: #111;
+  background: linear-gradient(110deg, #ffe7a1, #d9ae52);
+  box-shadow: 0 5px 18px rgba(232,200,90,.25);
+  transform: translateY(-2px);
 }
+
+.btn-ver-detalle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 
 .visor-detalle {
   position: fixed;
@@ -2594,8 +2611,7 @@ window.LA_ROSA_USE_SUPABASE = Boolean(
       const boton = document.createElement('button');
       boton.type = 'button';
       boton.className = 'btn-ver-detalle';
-      boton.textContent = '🔍 Ver detalle';
-
+      boton.textContent = 'Ver arreglo';
       const titulo = tarjeta.querySelector('h3');
       if (titulo) {
         titulo.before(boton);
